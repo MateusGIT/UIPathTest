@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1137,1117" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1137,774" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
@@ -62,7 +62,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="554,952" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="478,535" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="taxasDT" />
       <Variable x:TypeArguments="x:String" Default="C:\Users\mateu\OneDrive\Documentos\UiPath\Cadastro Taxas Cambiais\MODELO - Taxas - Copy.xlsm" Name="caminhoArquivo" />
@@ -72,50 +72,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[taxasDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="512,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="cotacaoTodasAsMoedas_24112020" WorkbookPath="cotacaoTodasAsMoedas_24112020.xlsx">
+    <ui:ReadRange AddHeaders="True" DataTable="[taxasDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="cotacaoTodasAsMoedas_24112020" WorkbookPath="cotacaoTodasAsMoedas_24112020.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:WriteRange AddHeaders="False" DataTable="[taxasDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="512,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="TAXAS" StartingCell="A1" WorkbookPath="[caminhoArquivo]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,578" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:WriteRange AddHeaders="False" DataTable="[taxasDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="436,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="TAXAS" StartingCell="A1" WorkbookPath="[caminhoArquivo]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,161" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,500" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,408" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[caminhoArquivo]">
-            <ui:ExcelApplicationScope.Body>
-              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="349,299" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Int32" Name="index" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow CurrentIndex="[index]" DataTable="[taxasDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="307,207" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                    <ui:ForEachRow.Body>
-                      <ActivityAction x:TypeArguments="sd:DataRow">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                        </ActivityAction.Argument>
-                      </ActivityAction>
-                    </ui:ForEachRow.Body>
-                  </ui:ForEachRow>
-                </Sequence>
-              </ActivityAction>
-            </ui:ExcelApplicationScope.Body>
-          </ui:ExcelApplicationScope>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
